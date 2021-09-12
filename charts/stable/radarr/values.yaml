@@ -5,18 +5,18 @@ image:
   pullPolicy: Always
   tag: nightly
 
-securityContext:
-  privileged: false
-  readOnlyRootFilesystem: false
-  allowPrivilegeEscalation: true
-  runAsNonRoot: true
+#securityContext:
+#  privileged: false
+#  readOnlyRootFilesystem: false
+#  allowPrivilegeEscalation: true
+#  runAsNonRoot: true
 
-podSecurityContext:
-  runAsUser: 1000
-  runAsGroup: 1000
-  fsGroup: 1000
-  supplementalGroups: []
-  fsGroupChangePolicy: "OnRootMismatch"
+#podSecurityContext:
+#  runAsUser: 1000
+#  runAsGroup: 1000
+#  fsGroup: 1000
+#  supplementalGroups: []
+#  fsGroupChangePolicy: "OnRootMismatch"
 
 service:
   main:
@@ -25,9 +25,9 @@ service:
         port: 7878
 
 env: {}
-  # TZ: UTC
-  # PUID: 1001
-  # PGID: 1001
+   TZ: Europe/Berlin
+   PUID: 1000
+   PGID: 1000
 
 probes:
   liveness:
