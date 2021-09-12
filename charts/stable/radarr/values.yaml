@@ -25,9 +25,9 @@ service:
         port: 7878
 
 env: {}
-   TZ: Europe/Berlin
-   PUID: 1000
-   PGID: 1000
+   #TZ: Europe/Berlin
+   #PUID: 1000
+   #PGID: 1000
 
 probes:
   liveness:
